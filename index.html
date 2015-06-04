@@ -29,7 +29,6 @@
 
             moverInit();
 
-
             $targetEle.mouseenter(function () {
                 var $_parent = $(this).parent(),
                       _width = $_parent.outerWidth(true),
@@ -74,14 +73,13 @@
         });
     </script>
     
-
 </head>
 
 <body>
 <!--菜单栏-->
 <div class="header">
     <div class="header_logo"></div>
-    <div class="tel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话:18684678684</div>
+    <div class="tel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/tel.png">18684678684</div>
     <div class="nav">
         <ul id="nav_ul">
             <li class="cur"><a href="#firstpage">首页</a></li>
@@ -118,12 +116,13 @@
         <script type="text/javascript" src="js/pic.js"></script>
         <script>
             $(document).ready(function () {
-                $('#img-play').maiPlayer({speedSwitch: 4000,});
+                $('#img-play').maiPlayer({speedSwitch: 6000,});
             });
         </script>
          
         <!--第一屏·itroduction-->
-        <div class="itroduction">
+        <div class="itroduction"> 
+            <div class="itro_line"></div>
             <div class="itroduction_main">
                 <div class="bannercover"></div>
                 <div class="itroduction_title"></div>
@@ -154,7 +153,7 @@
                     </div>
                     <div class="appdesign fl">
                             <div class="app_img"></div>
-                            <p style="padding-top:10px"><strong>APP设</strong>计</p>
+                            <p style="padding-top:10px"><strong>APP设计</strong></p>
                             <p style="padding-top:0; font-size:12px;">App Design</p>
                     </div>
                     <div class="graphicdesign fl">
@@ -411,7 +410,7 @@
         <div class="footer">
             <div class="footer_main">
                 <div class="bg"></div>
-                <p style="padding-top:60px;">Copyright (c) 2014-2015 大象设计事务所 ELEPHANT DESIGN 湘ICP备15005725号</p>
+                <p>Copyright (c) 2014-2015 大象设计事务所 ELEPHANT DESIGN 湘ICP备15005725号&nbsp;&nbsp;&nbsp;</p>
             </div>
         </div>
     </div>
