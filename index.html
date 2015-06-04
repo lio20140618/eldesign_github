@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="大象设计工作室,网站设计,UI设计,APP设计，UI设计工作室，专业UI设计工作室"/>
+    <meta name="description" content="大象设计工作室，长沙，大象院工作室提供视觉设计服务，APP设计与开发，专业UI设计">
+    <title> 大象设计工作室-网站设计-UI设计-网站建设-长沙·上海UI设计-专业UI设计</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/animate.css">
+   
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/mootools-core.js"></script>
+    <script type="text/javascript" src="js/mediabox.js"></script>
+
+    <script>
+        $(function () {
+            var $liCur;
+            var $slider = $(".curBg"),
+                    $navBox = $(".nav");
+            $targetEle = $(".nav ul li a");
+
+            moverInit();
+
+
+            $targetEle.mouseenter(function () {
+                var $_parent = $(this).parent(),
+                      _width = $_parent.outerWidth(true),
+                        posL = $_parent.position().left;
+                $slider.stop(true, true).animate({
+                    "left": posL,
+                    "width": _width
+                }, "fast");
+            });
+            $navBox.mouseleave(function () {
+                moverInit();
+            });
+
+            function moverInit() {
+                $liCur = $(".nav ul li.cur");
+                curP = $liCur.position().left;
+                curW = $liCur.outerWidth(true);
+                $slider.animate({
+                    "left": curP,
+                    "width": curW
+                });
+            }
+
+            $('#dowebok').fullpage({
+                sectionsColor: ['#fff', '#fff', '#fff', '#fff'],
+                'navigation': true,
+                'anchors': ['firstpage', 'secondpage', '3rdpage', '4thpage'],
+                'afterLoad': function (anchors, index) {
+                    var i = index - 1;
+                    $("#nav_ul li").eq(i).addClass('cur').siblings().removeClass('cur');
+                    moverInit();
+                }
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#nav_ul li").click(function () {
+                $(this).addClass('cur').siblings().removeClass('cur');
+            });
+
+        });
+    </script>
+    
+
+</head>
+
+<body>
+<!--菜单栏-->
+<div class="header">
+    <div class="header_logo"></div>
+    <div class="tel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话:18684678684</div>
+    <div class="nav">
+        <ul id="nav_ul">
+            <li class="cur"><a href="#firstpage">首页</a></li>
+            <li><a href="#secondpage">服务</a></li>
+            <li><a href="#3rdpage">作品</a></li>
+            <li><a href="#4thpage">团队</a></li>
+        </ul>
+        <div class="cb"></div>
+        <div class="curBg"></div>
+    </div>
+</div>
+<div id="dowebok">
+    <div class="section">
+        <!--第一屏·主广告图·banner--->
+        <div class="bannerbox">
+            <div class="banner" id="img-play">
+                <ul>
+                    <li><a href="#">
+                        <img src="images/banner01.jpg">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/banner02.jpg">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/banner03.jpg">
+                    </a></li>
+                </ul>
+                <div class="cb"></div>
+                <div class="prev"><img src="images/prev.png"></div>
+                <div class="next"><img src="images/nexth.png"></div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/pic.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#img-play').maiPlayer({speedSwitch: 4000,});
+            });
+        </script>
+         
+        <!--第一屏·itroduction-->
+        <div class="itroduction">
+            <div class="itroduction_main">
+                <div class="bannercover"></div>
+                <div class="itroduction_title"></div>
+                <div class="itroduction_content_text"></div>
+                <div class="itroduction_content_logo"></div>
+                <div class="itroduction_content_line"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <!--第二屏区·about us-->
+        <div class="aboutus" style="padding-top:110px;" id="zoominleft">
+            <div class="mline" style="top:285px;"></div>
+            <div class="aboutus_main">
+                <div class="coverbg"></div>
+                <div class="ab_title"></div>
+                <div class="redline"></div>
+                <div class="ab_slogin" style="padding-bottom:60px;"></div>
+                <div class="work">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="webdesign fl">
+                            <div class="wb_img"></div>
+                            <p style="padding-top:10px;"><strong>网页设计</strong></p>
+                            <p style="padding-top:0; font-size:12px;">Web Design</p>
+                    </div>
+                    <div class="appdesign fl">
+                            <div class="app_img"></div>
+                            <p style="padding-top:10px"><strong>APP设</strong>计</p>
+                            <p style="padding-top:0; font-size:12px;">App Design</p>
+                    </div>
+                    <div class="graphicdesign fl">
+                            <div class="apd_img"></div>
+                            <p style="padding-top:10px;"><strong>平面设计</strong></p>
+                            <p style="padding-top:0; font-size:12px;">Graphic Design</p>
+                    </div>
+                    <div class="filmpost fl">
+                            <div class="flp_img"></div>
+                            <p style="padding-top:10px;"><strong>影视后期</strong></p>
+                            <p style="padding-top:0; font-size:12px;">Film post</p>
+                    </div>
+                    <div class="cb"></div>
+                </div>
+
+            </div>
+        </div>
+        <!--第二屏·aboutus_bg-->
+        <div class="aboutus_bg">
+            <div class="aboutus_bg_main">
+                <div class="bg"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <!--第三屏·our work填充区域-->
+        <div class="ourwork_bg1">
+            <div class="ourwork_bg1_main">
+            </div>
+        </div>
+        <!---第三屏·our work-->
+        <div class="ourwork">
+            <div class="mline"></div>
+            <div class="ourwork_main">
+                <div class="bg"></div>
+                <div class="ow_title"></div>
+                <div class="whiteline"></div>
+                <div class="slide">
+                    <div class="product">
+                            <div class="ourwork_work1 fl">
+                                <div class="shape">                 
+                                    <a href="#" class="overlay round"></a>
+                                    <div class="details">
+                                       <span class="heading">EL Design</span>
+                                       <hr />
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                       <a href="images/205759154657.jpg" rel="lightbox[ostec]" title="eldesign作品1" ><div class="button">VIEW</div></a> 
+                                       <a href="images/9a0d6e61ee93945623ec24dcd5e47719.jpg" rel="lightbox[ostec]" title="eldesign作品2" ></a> 
+                                    </div>
+                                    <div class="shapebg"></div>
+                                    <div class="base">
+                                         <img src="images/our-work-1.png" alt="">
+                                    </div>     
+                                </div>    
+                            </div> 
+                            <div class="ourwork_work2 fl">
+                                <div class="shape">                            
+                                    <a href="#" class="overlay round"></a>
+                                    <div class="details">
+                                       <span class="heading">EL Design</span>
+                                       <hr />
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                       <a href="images/205759154657.jpg" rel="lightbox[ostec]" title="eldesign作品1" ><div class="button">VIEW</div></a> 
+                                       <a href="images/9a0d6e61ee93945623ec24dcd5e47719.jpg" rel="lightbox[ostec]" title="eldesign作品2" ></a>  
+                                    </div>
+                                    <div class="shapebg"></div>
+                                    <div class="base">
+                                         <img src="images/our-work-2.png" alt="">
+                                    </div>     
+                                </div>    
+                            </div>
+                            <div class="ourwork_work3 fl">
+                               <div class="shape">                            
+                                    <a href="#" class="overlay round"></a>
+                                    <div class="details">
+                                       <span class="heading">EL Design</span>
+                                       <hr />
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                       <a href="images/205759154657.jpg" rel="lightbox[ostec]" title="eldesign作品1" ><div class="button">VIEW</div></a> 
+                                       <a href="images/9a0d6e61ee93945623ec24dcd5e47719.jpg" rel="lightbox[ostec]" title="eldesign作品2" ></a> 
+                                    </div>
+                                    <div class="shapebg"></div>
+                                    <div class="base">
+                                         <img src="images/our-work-3.png" alt="">
+                                    </div>     
+                                </div>    
+                            </div>
+                            <div class="ourwork_work4 fl">
+                                <div class="shape">                            
+                                    <a href="#" class="overlay round"></a>
+                                    <div class="details">
+                                       <span class="heading">EL Design</span>
+                                       <hr />
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                       <a href="images/205759154657.jpg" rel="lightbox[ostec]" title="eldesign作品1" ><div class="button">VIEW</div></a> 
+                                       <a href="images/9a0d6e61ee93945623ec24dcd5e47719.jpg" rel="lightbox[ostec]" title="eldesign作品2" ></a> 
+                                    </div>
+                                    <div class="shapebg"></div>
+                                    <div class="base">
+                                         <img src="images/our-work-4.png" alt="">
+                                    </div>     
+                                </div>    
+                            </div>
+                        </ul>
+                        <div class="cb"></div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="product">
+                            <div class="ourwork_work1 fl">
+                               <div class="shape">                            
+                                    <a href="#" class="overlay round"></a>
+                                    <div class="details">
+                                       <span class="heading">EL Design</span>
+                                       <hr />
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                       <a href="images/205759154657.jpg" rel="lightbox[ostec]" title="eldesign作品1" ><div class="button">VIEW</div></a> 
+                                       <a href="images/9a0d6e61ee93945623ec24dcd5e47719.jpg" rel="lightbox[ostec]" title="eldesign作品2" ></a> 
+                                    </div>
+                                    <div class="shapebg"></div>
+                                    <div class="base">
+                                         <img src="images/our-work-5.png" alt="">
+                                    </div>     
+                                </div>    
+                            </div>
+                            <div class="ourwork_work2 fl">
+                                <div class="shape">                            
+                                    <a href="#" class="overlay round"></a>
+                                    <div class="details">
+                                       <span class="heading">EL Design</span>
+                                       <hr />
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                       <a href="images/205759154657.jpg" rel="lightbox[ostec]" title="eldesign作品1" ><div class="button">VIEW</div></a> 
+                                       <a href="images/9a0d6e61ee93945623ec24dcd5e47719.jpg" rel="lightbox[ostec]" title="eldesign作品2" ></a> 
+                                    </div>
+                                    <div class="shapebg"></div>
+                                    <div class="base">
+                                         <img src="images/our-work-6.png" alt="">
+                                    </div>     
+                                </div>    
+                            </div>
+                            <div class="ourwork_work3 fl">
+                                <div class="shape">                            
+                                    <a href="#" class="overlay round"></a>
+                                    <div class="details">
+                                       <span class="heading">EL Design</span>
+                                       <hr />
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                       <a href="images/205759154657.jpg" rel="lightbox[ostec]" title="eldesign作品1" ><div class="button">VIEW</div></a> 
+                                       <a href="images/9a0d6e61ee93945623ec24dcd5e47719.jpg" rel="lightbox[ostec]" title="eldesign作品2" ></a> 
+                                    </div>
+                                    <div class="shapebg"></div>
+                                    <div class="base">
+                                         <img src="images/our-work-8.png" alt="">
+                                    </div>     
+                                </div>    
+                            </div>
+                            <div class="ourwork_work4 fl">
+                                <div class="shape">                            
+                                    <a href="#" class="overlay round"></a>
+                                    <div class="details">
+                                       <span class="heading">EL Design</span>
+                                       <hr />
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                       <a href="images/205759154657.jpg" rel="lightbox[ostec]" title="eldesign作品1" ><div class="button">VIEW</div></a> 
+                                       <a href="images/9a0d6e61ee93945623ec24dcd5e47719.jpg" rel="lightbox[ostec]" title="eldesign作品2" ></a> 
+                                    </div>
+                                    <div class="shapebg"></div>
+                                    <div class="base">
+                                         <img src="images/our-work-7.png" alt="">
+                                    </div>     
+                                </div>    
+                            </div>
+                        </ul>
+                        <div class="cb"></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+			Mediabox.scanPage = function() {
+			  var links = $$("a").filter(function(el) {
+				return el.rel && el.rel.test(/^lightbox/i);
+			  });
+			  $$(links).mediabox({/* Put custom options here */}, null, function(el) {
+				var rel0 = this.rel.replace(/[[]|]/gi," ");
+				var relsize = rel0.split(" ");
+				return (this == el) || ((this.rel.length > 8) && el.rel.match(relsize[1]));
+			  });
+			};
+			window.addEvent("domready", Mediabox.scanPage);
+		</script>
+        <!--第三屏·our work填充区域-->
+        <div class="ourwork_bg2">
+            <div class="ourwork_bg2_main">
+                <div class="bg"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <!---第四屏·team_bg-->
+        <div class="team_bg" style="margin-top:-510px;">
+            <div class="team_bg_main">
+                <div class="bg"></div>
+            </div>
+        </div>
+        <!--第四屏·team-->
+        <div class="team">
+            <div class="team_main">
+                <div class="bg"></div>
+                <div class="tm_title"></div>
+                <div class="redline"></div>
+                <div class="tm_slogin"></div>
+                <div class="designer">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <ul>
+                        <li style="margin-left:200px;" class="lio">
+                            <a href="#">
+                                <div class="lio_icon"></div>
+                                <p style="padding-top:10px;">Lio</p>
+                                <p style="padding-top:0; font-size:12px;">平面/UI设计</p>
+                                <p style="padding-top:0; font-size:12px;">QQ:365936246</p>
+                            </a>
+                        </li>
+                        <li class="xiong">
+                            <a href="#">
+                                <div class="xiong_icon"></div>
+                                <p style="padding-top:10px;">雄古仔</p>
+                                <p style="padding-top:0; font-size:12px;">广告/影视后期</p>
+                                <p style="padding-top:0; font-size:12px;">QQ:363158124</p>
+                            </a>
+                        </li>
+                        <li class="ouyang">
+                            <a href="#">
+                                <div class="ouyang_icon"></div>
+                                <p style="padding-top:10px;">欧阳龙</p>
+                                <p style="padding-top:10; font-size:12px;">前端工程师</p>
+                                <p style="padding-top:0; font-size:12px;">QQ:837531387</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="cb"></div>
+                </div>
+            </div>
+            <div class="mline"></div>
+        </div>
+        <!--尾部·footer-->
+        <div class="footer">
+            <div class="footer_main">
+                <div class="bg"></div>
+                <p style="padding-top:60px;">Copyright (c) 2014-2015 大象设计事务所 ELEPHANT DESIGN 湘ICP备15005725号</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+body, h1, h2, h3, p, dl, ul, ol, form {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    color: #646464;
+    font-family: '微软雅黑';
+}
+
+dd {
+    margin-left: 0;
+}
+
+:focus {
+    outline: 0;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+.cb {
+    clear: both
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+em, var {
+    font-style: normal;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+html, body {
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+table, tr, th, td {
+    margin: 0;
+    padding: 0;
+}
+hr {color:#fff;}
