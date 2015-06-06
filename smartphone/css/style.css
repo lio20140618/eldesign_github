@@ -1,0 +1,216 @@
+
+/*common*/
+.f-hide{ display: none;}
+.overlay{ position: fixed; z-index: 99; height: 100%; width: 100%; top: 0; background:rgba(0,0,0,.85); display: none;}
+.share-txt{ position: fixed; top: 60px; right: 60px; z-index: 100;}
+
+/*swiper*/
+
+.swiper-container,.swiper-container-h,.swiper-container-v{ height: 100%; width: 100%; padding:0; }
+.swiper-container-h2,.swiper-container-v{width: 640px; margin-top: 70px;}
+.swiper-container-h2 .swiper-slide{ background: none;}
+.swiper-slide{ width: 100%; position:relative; overflow: hidden;}
+.swiper-slide{ background: url(../img/page1-bg.jpg); background-size:cover;}
+
+.swiper-slide img{ opacity: 1;}
+.arrow{ position: absolute; left: 50%;  bottom: 30px; margin-left:-24px; width: 48px; opacity: 0; z-index: 20;}
+
+
+
+
+ /*头部*/
+.header{position:relative; width:640px; height:63px; background:#1c1c1c; z-index:50; margin:0; }
+.header .header_logo {position:absolute;  width:103px; height:98px; left:3.9%; background:url(../images/logo.png) no-repeat; z-index:600;}
+.header .nav {position:relative; float:right; width:22.5%; height:100%; line-height:100%; margin-right:0; z-index:40; margin-top:0; background:url(../images/nav_onclick.png) no-repeat; z-index:600;}
+
+
+   
+/*广告栏*/
+.banner {position:relative; width:640px; height:295px; z-index:10; margin:0px; background:#1052b2; overflow:hidden;}
+.banner .banner_img1{width:640px; height:295px; background:url(../images/banner1.jpg) no-repeat;}
+.banner ul {width:1920px;}
+.banner ul li {width:640px; float:left;}
+.banner .prev {position:absolute; width:92px; height:104px; top:35%; left:2%; z-index:600; background:url(../images/prev.png) no-repeat;}
+.banner .next{position:absolute; width:92px; height:104px; top:35%; right:2%; z-index:600; background:url(../images/nexth.png) no-repeat;}
+.coverbg {position:absolute; width:640px; height:57px;  background:url(../images/aboutus_banner_cover.png) no-repeat top center; background-size:100%; top:333px; z-index:1000;}
+.linebg {position:absolute; background:url(../images/about-us_line.png) no-repeat; background-size:100%; width:40%; height:20%; top:523px; left:76px; z-index:800;}
+
+
+
+/*关于我们*/
+.aboutus {width:640px;  background-color:#fff; position:relative; margin:28px auto; text-align:center;}
+.aboutus .redline {width:92px; height:4px; background-color:#e00000; margin:2% auto 0;}
+.aboutus .mline {width:640px; height:1px; background-color:#dcdcdc; margin:0% auto;}
+.aboutus .work {position:relative; width:640px; height:473px; margin-top:57px;}
+.aboutus .work ul{text-align:center;}
+.aboutus .work li{float:left; width:128px; height:227px; }
+.aboutus .work .line {position:absolute; width:293px; height:188px; background:url(../images/about-us_line.png) no-repeat; top:-70px; left:110px;}
+.aboutus .work a {font-size:15px; color:#3b3b3b; font-size:15px;}
+.aboutus .work a:hover {font-size:15px; color:#ce0414; font-size:15px;}
+.aboutus .ab_title {width:260px; height:60px; padding-top:6px; background:url(../images/about-us.png) no-repeat; margin:0 auto;}
+.aboutus .ab_slogin {width:159px; height:21px; background:url(../images/about-us_slogin.png) no-repeat; margin:25px auto;}
+
+.aboutus .webdesign {
+	position:absolute;
+	width:149px;
+	height:201px;
+	left:130px;
+	top:50px;
+}
+.aboutus .webdesign .wb_img {
+	width:149px;
+	height:149px;
+	background:url(../images/about-us_web.png) no-repeat;
+}
+.aboutus .webdesign .wb_img:hover {
+	width:149px;
+	height:149px;
+	background:url(../images/about-us_web_onclick.png) no-repeat;
+}
+.aboutus .appdesign {
+	position:absolute;
+	width:149px;
+	height:201px;
+	right:130px;
+	top:50px;
+}
+.aboutus .appdesign .app_img {
+	width:149px;
+	height:149px;
+	background:url(../images/about-us_app.png) no-repeat;
+}
+.aboutus .appdesign .app_img:hover {
+	width:149px;
+	height:149px;
+	background:url(../images/about-us_app_onclick.png) no-repeat;
+}
+.aboutus .graphicdesign {
+	position:absolute;
+	width:149px;
+	height:201px;
+	left:130px;
+	top:280px;
+}
+.aboutus .graphicdesign .apd_img {
+	width:149px;
+	height:149px;
+	background:url(../images/about-us_gra.png) no-repeat;
+}
+.aboutus .graphicdesign .apd_img:hover {
+	width:149px;
+	height:149px;
+	background:url(../images/about-us_graphic_onclick.png) no-repeat;
+}
+.aboutus .filmpost {
+	position:absolute;
+	width:149px;
+	height:201px;
+	right:130px;
+	top:280px;
+	
+}
+.aboutus .filmpost .flp_img {
+	width:149px;
+	height:149px;
+	background:url(../images/about-us_film.png) no-repeat;
+}
+.aboutus .filmpost .flp_img:hover {
+	width:149px;
+	height:149px;
+	background:url(../images/about-us_film_onclick.png) no-repeat;
+}
+
+	
+/*我们的作品*/
+.ourwork {width:640px; background-color:#fff; position:relative; padding-top:2.5%; margrin:0 auto; text-align:center; background:url(../images/background_2.jpg) no-repeat  center; background-size:cover;height:100%;}
+.ourwork .ow_title {width:260px; height:70px; background:url(../images/our-work.png) no-repeat; margin:0 auto;}
+.ourwork .redline {width:93px; height:4px; background-color:#e00000; margin:2% auto 0;}
+.ourwork .mline {width:640px; height:1px; background-color:#dcdcdc; margin:0% auto;}
+.ourwork  .product {position:relative; width:640px;  margin-top:15%;}
+.ourwork .ourwork_work1 {
+	position:absolute;
+    left:80px;
+	top:50px;
+}
+
+.ourwork .ourwork_work2 {
+    position:absolute;
+    right:80px;
+	top:50px;
+}
+
+
+
+.ourwork .ourwork_work3 {
+    position:absolute;
+    left:80px;
+	top:300px;
+}
+
+
+.ourwork  .ourwork_work4 {
+    position:absolute;
+    right:80px;
+	top:300px;
+}
+
+.ourwork .ourwork_work5 {
+    position:absolute;
+    left:80px;
+	top:550px;
+}
+
+
+.ourwork  .ourwork_work6 {
+    position:absolute;
+    right:80px;
+	top:550px;
+}
+
+.ourwork .product_img1 {width:200px; height:200px; background:url(../images/our-work-1.png);}
+.ourwork .product_img2 {width:200px; height:200px; background:url(../images/our-work-2.png);}
+.ourwork .product_img3 {width:200px; height:200px; background:url(../images/our-work-3.png);}
+.ourwork .product_img4 {width:200px; height:200px; background:url(../images/our-work-4.png);}
+.ourwork .product_img5 {width:200px; height:200px; background:url(../images/our-work-5.png);}
+.ourwork .product_img6 {width:200px; height:200px; background:url(../images/our-work-6.png);}
+
+	
+/*团队*/
+.team { width:100%; bakckground-color:#fff;  position:relative; margin:2.5% auto; text-align:center;}
+.team .mline {width:100%; height:1px; background-color:#dcdcdc; margin:0% auto;}
+.team .redline {width:14.5%; height:4px; background-color:#e00000; margin:2% auto 0;}
+.team .designer {width:100%; margin-top:12%;}
+.team .designer ul{text-align:center;}
+.team .designer p{width:100%;}
+.team .designer li{float:left; width:25.1%; height:14.1%;}
+.team .designer a {font-size:15px; color:#3b3b3b; font-size:13px;}
+.team .designer a:hover {font-size:15px; color:#ce0414; font-size:13px;}	
+.team .bg {position:absolute; width:48%; height:34%; background:url(../images/team_line.png) no-repeat; background-size:100%; right:6%; top:65%;}
+.team .tm_title {background:url(../images/team.png) no-repeat; width:193px; height:59px; padding-top:0.5%; margin:0 auto;}
+.team .lio {background:url(../images/team_lio.png) no-repeat; width:160px; height:160px;}
+.team .xiong {background:url(../images/team_xiong.png) no-repeat; width:160px; height:160px;}
+.team .ouyang {background:url(../images/team_long.png) no-repeat; width:160px; height:160px;}
+<!-- 动 画 -- >
+
+/*loading*/
+/*动画*/
+.swiper-slide-active img{
+  opacity: 1;
+}
+.swiper-slide-active .arrow{
+    -webkit-animation: bounce 2s infinite both;
+}
+.page-loading{position:absolute;top:0;right:0;bottom:0;left:0;z-index:999;background:#fff}
+.page-loading .border{position:relative;margin:60% auto auto auto;width:50px;height:50px;border-radius:50%;list-style:none;font-size:100px}
+.page-loading .border li{position:absolute;width:.3em;height:.3em;border-radius:50%}
+.page-loading .border li:nth-child(1){top:0;left:50%;margin:0 0 0 -.1em;background:#feb963;-webkit-transform-origin:50% 250%;-webkit-animation:rota 1.13s linear infinite,opa 3.67s ease-in-out infinite alternate}
+.page-loading .border li:nth-child(2){top:50%;right:0;margin:-.1em 0 0 0;background:#f86260;-webkit-transform-origin:-150% 50%;-webkit-animation:rota 1.86s linear infinite,opa 4.29s ease-in-out infinite alternate}
+.page-loading .border li:nth-child(3){bottom:0;left:50%;margin:0 0 0 -.1em;background:#49b2e1;-webkit-transform-origin:50% -150%;-webkit-animation:rota 1.45s linear infinite,opa 5.12s ease-in-out infinite alternate}
+.page-loading .border li:nth-child(4){top:50%;left:0;margin:-.1em 0 0 0;background:#feb95d;-webkit-transform-origin:250% 50%;-webkit-animation:rota 1.72s linear infinite,opa 5.25s ease-in-out infinite alternate}
+@-webkit-keyframes rota{to{-webkit-transform:rotate(360deg)}
+}
+@keyframes rota{to{transform:rotate(360deg)}
+}
+
+
+
