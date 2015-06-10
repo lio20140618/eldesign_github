@@ -1,215 +1,1295 @@
+/*mbverlay*/
+#mbOverlay {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    cursor: pointer;
+}
+
+#mbOverlay.mbOverlayFF {
+    /*background: transparent url(80.png) repeat;*/
+}
+
+#mbOverlay.mbOverlayIE {
+    position: absolute;
+}
+
+#mbCenter {
+    height: 557px;
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    background-color: #fff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.70);
+    -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.70);
+}
+
+#mbCenter.mbLoading {
+    background: #fff url(../images/WhiteLoading.gif) no-repeat center;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+#mbImage {
+    left: 0;
+    top: 0;
+    font-family: Myriad, Verdana, Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    text-align: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+#mbImage a, #mbImage a:link, #mbImage a:visited {
+    color: #ddd;
+}
+
+#mbImage a:hover, #mbImage a:active {
+    color: #fff;
+}
+
+#mbBottom {
+    min-height: 20px;
+    font-family: Myriad, Verdana, Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 12px;
+    color: #999;
+    text-align: left;
+    padding: 0 10px 10px;
+}
+
+#mbTitle {
+    display: inline;
+    color: #999;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+#mbNumber {
+    background: url(../images/mbNumber_bg.gif) no-repeat center;
+    display: inline;
+    color: #C00;
+    line-height: 26px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    width: 65px;
+    height: 26px;
+}
+
+#mbCaption {
+    display: block;
+    color: #999;
+    line-height: 14px;
+    font-size: 10px;
+}
+
+#mbPrevLink, #mbNextLink, #mbCloseLink {
+    display: block;
+    float: right;
+    height: 20px;
+    margin: 0;
+    outline: none;
+}
+
+#mbPrevLink {
+    width: 32px;
+    height: 100px;
+    background: transparent url(../images/CustomBlackPrevious.gif) no-repeat center;
+    position: absolute;
+    top: 38%;
+    left: -32px;
+}
+
+#mbNextLink {
+    width: 32px;
+    height: 100px;
+    background: transparent url(../images/CustomBlackNext.gif) no-repeat center;
+    position: absolute;
+    top: 38%;
+    right: -32px;
+}
+
+#mbCloseLink {
+    width: 24px;
+    background: transparent url(../images/CustomBlackClose.gif) no-repeat center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#mbError {
+    position: relative;
+    font-family: Myriad, Verdana, Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    border: 10px solid #700;
+    padding: 10px 10px 10px;
+    margin: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#mbError a, #mbError a:link, #mbError a:visited, #mbError a:hover, #mbError a:active {
+    color: #d00;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
 
 /*common*/
-.f-hide{ display: none;}
-.overlay{ position: fixed; z-index: 99; height: 100%; width: 100%; top: 0; background:rgba(0,0,0,.85); display: none;}
-.share-txt{ position: fixed; top: 60px; right: 60px; z-index: 100;}
+.f-hide {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, .85);
+    display: none;
+}
+
+.share-txt {
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    z-index: 100;
+}
 
 /*swiper*/
 
-.swiper-container,.swiper-container-h,.swiper-container-v{ height: 100%; width: 100%; padding:0; }
-.swiper-container-h2,.swiper-container-v{width: 640px; margin-top: 70px;}
-.swiper-container-h2 .swiper-slide{ background: none;}
-.swiper-slide{ width: 100%; position:relative; overflow: hidden;}
-.swiper-slide{ background: url(../img/page1-bg.jpg); background-size:cover;}
+.swiper-container, .swiper-container-h, .swiper-container-v {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
 
-.swiper-slide img{ opacity: 1;}
-.arrow{ position: absolute; left: 50%;  bottom: 30px; margin-left:-24px; width: 48px; opacity: 0; z-index: 20;}
+.swiper-container-h2, .swiper-container-v {
+    width: 640px;
+    margin-top: 70px;
+}
 
+.swiper-container-h2 .swiper-slide {
+    background: none;
+}
 
+.swiper-slide {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
 
+.swiper-slide {
+    background: url(../img/page1-bg.jpg);
+    background-size: cover;
+}
 
- /*头部*/
-.header{position:relative; width:640px; height:63px; background:#1c1c1c; z-index:50; margin:0; }
-.header .header_logo {position:absolute;  width:103px; height:98px; left:3.9%; background:url(../images/logo.png) no-repeat; z-index:600;}
-.header .nav {position:relative; float:right; width:22.5%; height:100%; line-height:100%; margin-right:0; z-index:40; margin-top:0; background:url(../images/nav_onclick.png) no-repeat; z-index:600;}
+.swiper-slide img {
+    opacity: 1;
+}
 
+.arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -24px;
+    width: 48px;
+    opacity: 0;
+    z-index: 20;
+}
 
-   
+/*头部*/
+.header {
+    position: relative;
+    width: 640px;
+    height: 63px;
+    background: #1c1c1c;
+    z-index: 50;
+    margin: 0;
+}
+
+.header .header_logo {
+    position: absolute;
+    width: 103px;
+    height: 98px;
+    left: 3.9%;
+    background: url(../images/logo.png) no-repeat;
+    z-index: 600;
+}
+
+.header .nav {
+    position: relative;
+    float: right;
+    width: 22.5%;
+    height: 100%;
+    line-height: 100%;
+    margin-right: 0;
+    z-index: 40;
+    margin-top: 0;
+    background: url(../images/nav_onclick.png) no-repeat;
+    z-index: 600;
+}
+
 /*广告栏*/
-.banner {position:relative; width:640px; height:295px; z-index:10; margin:0px; background:#1052b2; overflow:hidden;}
-.banner .banner_img1{width:640px; height:295px; background:url(../images/banner1.jpg) no-repeat;}
-.banner ul {width:1920px;}
-.banner ul li {width:640px; float:left;}
-.banner .prev {position:absolute; width:92px; height:104px; top:35%; left:2%; z-index:600; background:url(../images/prev.png) no-repeat;}
-.banner .next{position:absolute; width:92px; height:104px; top:35%; right:2%; z-index:600; background:url(../images/nexth.png) no-repeat;}
-.coverbg {position:absolute; width:640px; height:57px;  background:url(../images/aboutus_banner_cover.png) no-repeat top center; background-size:100%; top:333px; z-index:1000;}
-.linebg {position:absolute; background:url(../images/about-us_line.png) no-repeat; background-size:100%; width:40%; height:20%; top:523px; left:76px; z-index:800;}
+.banner {
+    position: relative;
+    width: 640px;
+    height: 295px;
+    z-index: 10;
+    margin: 0px;
+    background: #1052b2;
+    overflow: hidden;
+}
 
+.banner .banner_img1 {
+    width: 640px;
+    height: 295px;
+    background: url(../images/banner1.jpg) no-repeat;
+}
 
+.banner ul {
+    width: 1920px;
+}
+
+.banner ul li {
+    width: 640px;
+    float: left;
+}
+
+.banner .prev {
+    position: absolute;
+    width: 92px;
+    height: 104px;
+    top: 35%;
+    left: 0%;
+    z-index: 600;
+    background: url(../images/prev.png) no-repeat;
+}
+
+.banner .next {
+    position: absolute;
+    width: 92px;
+    height: 104px;
+    top: 35%;
+    right: 0%;
+    z-index: 600;
+    background: url(../images/nexth.png) no-repeat;
+}
+
+.coverbg {
+    position: absolute;
+    width: 640px;
+    height: 57px;
+    background: url(../images/aboutus_banner_cover.png) no-repeat top center;
+    background-size: 100%;
+    top: 333px;
+    z-index: 1000;
+}
+
+.linebg {
+    position: absolute;
+    background: url(../images/about-us_line.png) no-repeat;
+    background-size: 100%;
+    width: 40%;
+    height: 20%;
+    top: 523px;
+    left: 76px;
+    z-index: 800;
+}
 
 /*关于我们*/
-.aboutus {width:640px;  background-color:#fff; position:relative; margin:28px auto; text-align:center;}
-.aboutus .redline {width:92px; height:4px; background-color:#e00000; margin:2% auto 0;}
-.aboutus .mline {width:640px; height:1px; background-color:#dcdcdc; margin:0% auto;}
-.aboutus .work {position:relative; width:640px; height:473px; margin-top:57px;}
-.aboutus .work ul{text-align:center;}
-.aboutus .work li{float:left; width:128px; height:227px; }
-.aboutus .work .line {position:absolute; width:293px; height:188px; background:url(../images/about-us_line.png) no-repeat; top:-70px; left:110px;}
-.aboutus .work a {font-size:15px; color:#3b3b3b; font-size:15px;}
-.aboutus .work a:hover {font-size:15px; color:#ce0414; font-size:15px;}
-.aboutus .ab_title {width:260px; height:60px; padding-top:6px; background:url(../images/about-us.png) no-repeat; margin:0 auto;}
-.aboutus .ab_slogin {width:159px; height:21px; background:url(../images/about-us_slogin.png) no-repeat; margin:25px auto;}
+.aboutus {
+    width: 640px;
+    background-color: #fff;
+    position: relative;
+    margin: 12px auto;
+    text-align: center;
+}
+
+.aboutus .redline {
+    width: 92px;
+    height: 4px;
+    background-color: #e00000;
+    margin: 2% auto 0;
+}
+
+.aboutus .mline {
+    width: 640px;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 0% auto;
+}
+
+
+.aboutus .work {
+    position: relative;
+    width: 640px;
+    height: 473px;
+    margin-top: 57px;
+}
+
+.aboutus .work ul {
+    text-align: center;
+}
+
+.aboutus .work li {
+    float: left;
+    width: 128px;
+    height: 227px;
+}
+
+.aboutus .work .line1 {
+    position: absolute;
+    width: 118px;
+    height: 168px;
+    background: url(../../images/about-us_line1.png) no-repeat;
+) no-repeat;
+    top: -68px;
+    left: 60px;
+}
+
+.aboutus .work .line2 {
+    position: absolute;
+    width: 192px;
+    height: 28px;
+    background: url(../../images/about-us_line2.png) no-repeat;
+) no-repeat;
+    top: -54px;
+    left: 140px;
+}
+
+.aboutus .work a {
+    font-size: 15px;
+    color: #3b3b3b;
+    font-size: 15px;
+}
+
+.aboutus .work a:hover {
+    font-size: 15px;
+    color: #ce0414;
+    font-size: 15px;
+}
+
+.aboutus .ab_title {
+    width: 260px;
+    height: 60px;
+    padding-top: 6px;
+    background: url(../images/about-us.png) no-repeat;
+    margin: 0 auto;
+}
+
+.aboutus .ab_slogin {
+    width: 159px;
+    height: 21px;
+    background: url(../images/about-us_slogin.png) no-repeat;
+    margin: 25px auto;
+}
 
 .aboutus .webdesign {
-	position:absolute;
-	width:149px;
-	height:201px;
-	left:130px;
-	top:50px;
-}
-.aboutus .webdesign .wb_img {
-	width:149px;
-	height:149px;
-	background:url(../images/about-us_web.png) no-repeat;
-}
-.aboutus .webdesign .wb_img:hover {
-	width:149px;
-	height:149px;
-	background:url(../images/about-us_web_onclick.png) no-repeat;
-}
-.aboutus .appdesign {
-	position:absolute;
-	width:149px;
-	height:201px;
-	right:130px;
-	top:50px;
-}
-.aboutus .appdesign .app_img {
-	width:149px;
-	height:149px;
-	background:url(../images/about-us_app.png) no-repeat;
-}
-.aboutus .appdesign .app_img:hover {
-	width:149px;
-	height:149px;
-	background:url(../images/about-us_app_onclick.png) no-repeat;
-}
-.aboutus .graphicdesign {
-	position:absolute;
-	width:149px;
-	height:201px;
-	left:130px;
-	top:280px;
-}
-.aboutus .graphicdesign .apd_img {
-	width:149px;
-	height:149px;
-	background:url(../images/about-us_gra.png) no-repeat;
-}
-.aboutus .graphicdesign .apd_img:hover {
-	width:149px;
-	height:149px;
-	background:url(../images/about-us_graphic_onclick.png) no-repeat;
-}
-.aboutus .filmpost {
-	position:absolute;
-	width:149px;
-	height:201px;
-	right:130px;
-	top:280px;
-	
-}
-.aboutus .filmpost .flp_img {
-	width:149px;
-	height:149px;
-	background:url(../images/about-us_film.png) no-repeat;
-}
-.aboutus .filmpost .flp_img:hover {
-	width:149px;
-	height:149px;
-	background:url(../images/about-us_film_onclick.png) no-repeat;
+    position: absolute;
+    width: 149px;
+    height: 201px;
+    left: 145px;
+    top: -15px;
 }
 
-	
+.aboutus .webdesign .wb_img {
+    width: 125px;
+    height: 125px;
+    background: url(../images/about-us_web.png) no-repeat;
+}
+
+.aboutus .webdesign .wb_img:hover {
+    width: 125px;
+    height: 125px;
+    background: url(../images/about-us_web_onclick.png) no-repeat;
+}
+
+.aboutus .appdesign {
+    position: absolute;
+    width: 125px;
+    height: 177px;
+    right: 145px;
+    top: -15px;
+}
+
+.aboutus .appdesign .app_img {
+    width: 125px;
+    height: 125px;
+    background: url(../images/about-us_app.png) no-repeat;
+}
+
+.aboutus .appdesign .app_img:hover {
+    width: 125px;
+    height: 125px;
+    background: url(../images/about-us_app_onclick.png) no-repeat;
+}
+
+.aboutus .graphicdesign {
+    position: absolute;
+    width: 125px;
+    height: 177px;
+    left: 145px;
+    top: 180px;
+}
+
+.aboutus .graphicdesign .apd_img {
+    width: 125px;
+    height: 125px;
+    background: url(../images/about-us_gra.png) no-repeat;
+}
+
+.aboutus .graphicdesign .apd_img:hover {
+    width: 125px;
+    height: 125px;
+    background: url(../images/about-us_graphic_onclick.png) no-repeat;
+}
+
+.aboutus .filmpost {
+    position: absolute;
+    width: 125px;
+    height: 177px;
+    right: 145px;
+    top: 180px;
+
+}
+
+.aboutus .filmpost .flp_img {
+    width: 125px;
+    height: 125px;
+    background: url(../images/about-us_film.png) no-repeat;
+}
+
+.aboutus .filmpost .flp_img:hover {
+    width: 125px;
+    height: 125px;
+    background: url(../images/about-us_film_onclick.png) no-repeat;
+}
+/*ourwork·shape*/
+.ourwork .shape {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.ourwork .shape .shapebg,
+.ourwork  .shape .details {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.ourwork  .shape .overlay {
+    display: block;
+    width: 206px;
+    height: 206px;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    -webkit-transform: scale(1, 1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.6s;
+    -moz-transform: scale(1, 1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 0.6s;
+    transform: scale(1, 1);
+    transition-timing-function: ease-out;
+    transition-duration: 0.6s;
+    z-index: 500;
+    /* allow user to actually perform actions underneath this layer */
+    pointer-events: none;
+    background-repeat: no-repeat;
+    outline: 0;
+}
+
+.ourwork .shape .overlay.round {
+    background: url(../images/round.png);
+}
+
+.ourwork .shape .shapebg {
+    background: #000;
+}
+
+.ourwork .shape .details span.heading {
+    font-family: '黑体', serif;
+    font-size: 22px;
+    display: block;
+    margin-top: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.ourwork .shape .details p {
+    font-family: 'Abel', sans-serif;
+    color: #fff;
+    width: 70%;
+    font-size: 12px;
+    margin: 10px auto;
+}
+
+.ourwork .shape .button {
+    padding: 5px 15px;
+    font-family: 'Abel', sans-serif;
+    font-size: 12px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    background: #9a101b;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ourwork  .shape .button:hover {
+    background: #fff;
+    color: #2f3644;
+}
+
+/*ourwork·shape:hover*/
+.ourwork .shape:hover .overlay {
+    -webkit-transform: scale(1.07, 1.07);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.3s;
+    -moz-transform: scale(1.07, 1.07);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 0.3s;
+}
+
+.ourwork  .shape:hover .shapebg {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+    display: block;
+}
+
+.ourwork  .shape:hover .details {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    z-index: 450;
+    display: block;
+}
+
 /*我们的作品*/
-.ourwork {width:640px; background-color:#fff; position:relative; padding-top:2.5%; margrin:0 auto; text-align:center; background:url(../images/background_2.jpg) no-repeat  center; background-size:cover;height:100%;}
-.ourwork .ow_title {width:260px; height:70px; background:url(../images/our-work.png) no-repeat; margin:0 auto;}
-.ourwork .redline {width:93px; height:4px; background-color:#e00000; margin:2% auto 0;}
-.ourwork .mline {width:640px; height:1px; background-color:#dcdcdc; margin:0% auto;}
-.ourwork  .product {position:relative; width:640px;  margin-top:15%;}
+.ourwork {
+    width: 640px;
+    background-color: #fff;
+    position: relative;
+    padding-top: 2.5%;
+    margrin: 0 auto;
+    text-align: center;
+    background: url(../images/background_2.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+
+.ourwork .ow_title {
+    width: 260px;
+    height: 70px;
+    background: url(../images/our-work.png) no-repeat;
+    margin: 0 auto;
+}
+
+.ourwork .redline {
+    width: 93px;
+    height: 4px;
+    background-color: #e00000;
+    margin: 2% auto 0;
+}
+
+.ourwork .mline {
+    width: 640px;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 0% auto;
+}
+
+.ourwork .product {
+    position: relative;
+    width: 640px;
+    margin-top: 15%;
+}
+
 .ourwork .ourwork_work1 {
-	position:absolute;
-    left:80px;
-	top:50px;
+    position: absolute;
+    left: 80px;
+    top: -50px;
 }
 
 .ourwork .ourwork_work2 {
-    position:absolute;
-    right:80px;
-	top:50px;
+    position: absolute;
+    right: 80px;
+    top: -50px;
 }
-
-
 
 .ourwork .ourwork_work3 {
-    position:absolute;
-    left:80px;
-	top:300px;
+    position: absolute;
+    left: 80px;
+    top: 200px;
 }
 
-
-.ourwork  .ourwork_work4 {
-    position:absolute;
-    right:80px;
-	top:300px;
+.ourwork .ourwork_work4 {
+    position: absolute;
+    right: 80px;
+    top: 200px;
 }
 
 .ourwork .ourwork_work5 {
-    position:absolute;
-    left:80px;
-	top:550px;
+    position: absolute;
+    left: 80px;
+    top: 450px;
 }
 
-
-.ourwork  .ourwork_work6 {
-    position:absolute;
-    right:80px;
-	top:550px;
+.ourwork .ourwork_work6 {
+    position: absolute;
+    right: 80px;
+    top: 450px;
 }
 
-.ourwork .product_img1 {width:200px; height:200px; background:url(../images/our-work-1.png);}
-.ourwork .product_img2 {width:200px; height:200px; background:url(../images/our-work-2.png);}
-.ourwork .product_img3 {width:200px; height:200px; background:url(../images/our-work-3.png);}
-.ourwork .product_img4 {width:200px; height:200px; background:url(../images/our-work-4.png);}
-.ourwork .product_img5 {width:200px; height:200px; background:url(../images/our-work-5.png);}
-.ourwork .product_img6 {width:200px; height:200px; background:url(../images/our-work-6.png);}
+.ourwork .product_img1 {
+    width: 200px;
+    height: 200px;
+    background: url(../images/our-work-1.png);
+}
 
-	
+.ourwork .product_img2 {
+    width: 200px;
+    height: 200px;
+    background: url(../images/our-work-2.png);
+}
+
+.ourwork .product_img3 {
+    width: 200px;
+    height: 200px;
+    background: url(../images/our-work-3.png);
+}
+
+.ourwork .product_img4 {
+    width: 200px;
+    height: 200px;
+    background: url(../images/our-work-4.png);
+}
+
+.ourwork .product_img5 {
+    width: 200px;
+    height: 200px;
+    background: url(../images/our-work-5.png);
+}
+
+.ourwork .product_img6 {
+    width: 200px;
+    height: 200px;
+    background: url(../images/our-work-6.png);
+}
+
 /*团队*/
-.team { width:100%; bakckground-color:#fff;  position:relative; margin:2.5% auto; text-align:center;}
-.team .mline {width:100%; height:1px; background-color:#dcdcdc; margin:0% auto;}
-.team .redline {width:14.5%; height:4px; background-color:#e00000; margin:2% auto 0;}
-.team .designer {width:100%; margin-top:12%;}
-.team .designer ul{text-align:center;}
-.team .designer p{width:100%;}
-.team .designer li{float:left; width:25.1%; height:14.1%;}
-.team .designer a {font-size:15px; color:#3b3b3b; font-size:13px;}
-.team .designer a:hover {font-size:15px; color:#ce0414; font-size:13px;}	
-.team .bg {position:absolute; width:48%; height:34%; background:url(../images/team_line.png) no-repeat; background-size:100%; right:6%; top:65%;}
-.team .tm_title {background:url(../images/team.png) no-repeat; width:193px; height:59px; padding-top:0.5%; margin:0 auto;}
-.team .lio {background:url(../images/team_lio.png) no-repeat; width:160px; height:160px;}
-.team .xiong {background:url(../images/team_xiong.png) no-repeat; width:160px; height:160px;}
-.team .ouyang {background:url(../images/team_long.png) no-repeat; width:160px; height:160px;}
-<!-- 动 画 -- >
+.team {
+    width: 100%;
+    bakckground-color: #fff;
+    position: relative;
+    margin: 2.5% auto;
+    text-align: center;
+}
+
+
+.team .mline {
+    width: 100%;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 0% auto;
+}
+
+.team  .mline2 {
+    width: 100%;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 0% auto;
+}
+
+.team .redline {
+    width: 14.5%;
+    height: 4px;
+    background-color: #e00000;
+    margin: 2% auto 0;
+}
+
+
+.team .designer {
+    width: 100%;
+    margin-top: 12%;
+}
+
+
+
+.team  .designer .line1 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: url(../images/team_line1.png) no-repeat;
+    top: 440px;
+    left: 370px;
+}
+
+.team .designer .line2 {
+    position: absolute;
+    width: 127px;
+    height: 275px;	
+    background: url(../images/team_line2.png) no-repeat;
+    top: 420px;
+    left: 456px;
+}
+
+.team .designer .line3 {
+    position: absolute;
+    width: 295px;
+    height: 70px;
+    background: url(../images/team_line3.png) no-repeat;
+    top: 563px;
+    left: 290px;
+}
+.team .designer ul {
+    text-align: center;
+}
+
+.team .designer p {
+    width: 100%;
+}
+
+.team .designer li {
+    float: left;
+    width: 25.1%;
+    height: 14.1%;
+}
+
+.team .designer a {
+    font-size: 15px;
+    color: #3b3b3b;
+    font-size: 13px;
+}
+
+.team .designer a:hover {
+    font-size: 15px;
+    color: #ce0414;
+    font-size: 13px;
+}
+
+.team .bg {
+    position: absolute;
+    width: 48%;
+    height: 34%;
+    background: url(../images/team_line.png) no-repeat;
+    background-size: 100%;
+    right: 6%;
+    top: 65%;
+}
+
+.team .tm_title {
+    background: url(../images/team.png) no-repeat;
+    width: 193px;
+    height: 59px;
+    padding-top: 0.5%;
+    margin: 0 auto;
+}
+
+.team .lio_icon {
+    background: url(../images/team_lio.png) no-repeat;
+    width: 160px;
+    height: 160px;
+}
+
+.team .xiong_icon {
+    background: url(../images/team_xiong.png) no-repeat;
+    width: 160px;
+    height: 160px;
+}
+
+.team .ouyang {
+    padding-top:20px;
+}
+.team .ouyang_icon {
+    background: url(../images/team_long.png) no-repeat;
+    width: 160px;
+    height: 160px;
+}
+
+
+/*footer*/
+.footer {width:640px;}
+<!--动 画-->
 
 /*loading*/
-/*动画*/
-.swiper-slide-active img{
-  opacity: 1;
+.swiper-slide-active img {
+    opacity: 1;
 }
-.swiper-slide-active .arrow{
+
+.swiper-slide-active .arrow {
     -webkit-animation: bounce 2s infinite both;
 }
-.page-loading{position:absolute;top:0;right:0;bottom:0;left:0;z-index:999;background:#fff}
-.page-loading .border{position:relative;margin:60% auto auto auto;width:50px;height:50px;border-radius:50%;list-style:none;font-size:100px}
-.page-loading .border li{position:absolute;width:.3em;height:.3em;border-radius:50%}
-.page-loading .border li:nth-child(1){top:0;left:50%;margin:0 0 0 -.1em;background:#feb963;-webkit-transform-origin:50% 250%;-webkit-animation:rota 1.13s linear infinite,opa 3.67s ease-in-out infinite alternate}
-.page-loading .border li:nth-child(2){top:50%;right:0;margin:-.1em 0 0 0;background:#f86260;-webkit-transform-origin:-150% 50%;-webkit-animation:rota 1.86s linear infinite,opa 4.29s ease-in-out infinite alternate}
-.page-loading .border li:nth-child(3){bottom:0;left:50%;margin:0 0 0 -.1em;background:#49b2e1;-webkit-transform-origin:50% -150%;-webkit-animation:rota 1.45s linear infinite,opa 5.12s ease-in-out infinite alternate}
-.page-loading .border li:nth-child(4){top:50%;left:0;margin:-.1em 0 0 0;background:#feb95d;-webkit-transform-origin:250% 50%;-webkit-animation:rota 1.72s linear infinite,opa 5.25s ease-in-out infinite alternate}
-@-webkit-keyframes rota{to{-webkit-transform:rotate(360deg)}
+
+.page-loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background: #fff
 }
-@keyframes rota{to{transform:rotate(360deg)}
+
+.page-loading .border {
+    position: relative;
+    margin: 60% auto auto auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    list-style: none;
+    font-size: 100px
+}
+
+.page-loading .border li {
+    position: absolute;
+    width: .3em;
+    height: .3em;
+    border-radius: 50%
+}
+
+.page-loading .border li:nth-child(1) {
+    top: 0;
+    left: 50%;
+    margin: 0 0 0 -.1em;
+    background: #feb963;
+    -webkit-transform-origin: 50% 250%;
+    -webkit-animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate
+}
+
+.page-loading .border li:nth-child(2) {
+    top: 50%;
+    right: 0;
+    margin: -.1em 0 0 0;
+    background: #f86260;
+    -webkit-transform-origin: -150% 50%;
+    -webkit-animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate
+}
+
+.page-loading .border li:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    margin: 0 0 0 -.1em;
+    background: #49b2e1;
+    -webkit-transform-origin: 50% -150%;
+    -webkit-animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate
+}
+
+.page-loading .border li:nth-child(4) {
+    top: 50%;
+    left: 0;
+    margin: -.1em 0 0 0;
+    background: #feb95d;
+    -webkit-transform-origin: 250% 50%;
+    -webkit-animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate
+}
+
+@-webkit-keyframes rota {
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes rota {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/*header*/
+.swiper-slide-active .header_logo {
+    -webkit-animation: bounceInLeft 0.8s 0.4s both;
+    -moz-animation: bounceInLeft 0.8s 0.4s both;
+    -o-animation: bounceInLeft 0.8s 0.4s both;
+    animation: bounceInLeft 0.8s 0.4s both;
+}
+
+.swiper-slide-active .nav {
+    -webkit-animation: bounceInRight 0.8s 0.4s both;
+    -moz-animation: bounceInRight0 .8s 0.4s both;
+    -o-animation: bounceInRight 0.8s 0.4s both;
+    animation: bounceInRight 0.8s 0.4s both;
+
+}
+
+
+
+/*banner*/
+.swiper-slide-active .banner {
+    -webkit-animation: fadeIn 1.1s both;
+    -moz-animation: fadeIn 1.1s both;
+    -o-animation: fadeIn 1.1s both;
+    animation: fadeIn 1.1s both;
+}
+
+.swiper-slide-active .prev {
+    -webkit-animation: fadeInUp 0.8s 2s both;
+    -moz-animation: fadeInUp 0.8s 2s both;
+    -o-animation: fadeInUp 0.8s 2s both;
+    animation: fadeInUp 0.8s 2s both;
+}
+
+.swiper-slide-active .next {
+    -webkit-animation: fadeInDown 0.8s 2s both;
+    -moz-animation: fadeInDown 0.8s 2s both;
+    -o-animation: fadeInDown 0.8s 2s both;
+    animation: fadeInDown 0.8s 2s both;
+}
+
+/*about us*/
+.swiper-slide-active .ab_title {
+    -webkit-animation: zoomInLeft 1s both;
+    -moz-animation: zoomInLeft 1s both;
+    -o-animation: zoomInLeft 1s both;
+    animation: zoomInLeft 1s both;
+}
+
+.swiper-slide-active .redline {
+    -webkit-animation: fadeInLeftBig 0.7s 1s both;
+    -moz-animation: fadeInLeftBig 0.7s 1s both;
+    -o-animation: fadeInLeftBig 0.7s 1s both;
+    animation: fadeInLeftBig 0.7s 1s both;
+}
+.swiper-slide-active .ab_slogin {
+    -webkit-animation: fadeIn 2s 1.9s both;
+    -moz-animation: fadeIn 2s 1.9s both;
+    -o-animation: fadeIn 2s 1.9s both;
+    animation: fadeIn 2s 1.9s both;
+}
+
+.swiper-slide-active .work .line {
+    -webkit-animation: rotateInDownLeft 1.2s 1.8s both;
+    -moz-animation: rotateInDownLeft 1.2s 1.8s both;
+    -o-animation: rotateInDownLeft 1.2s 1.8s both;
+    animation: rotateInDownLeft 1.2s 1.8s both;
+}
+
+.swiper-slide-active .webdesign {
+    -webkit-animation: fadeInLeftBig 0.8s 0.6s both;
+    -moz-animation: fadeInLeftBig 0.8s 0.6s both;
+    -o-animation: fadeInLeftBig 0.8s 0.6s both;
+    animation: fadeInLeftBig 0.8s 0.6s both;
+}
+
+.swiper-slide-active .webdesign .wb_img:hover {
+    -webkit-animation: flip 0.6s both;
+    -moz-animation: flip 0.6s both;
+    -o-animation: flip 0.6s both;
+    animation: flip 0.6s both;
+}
+
+.swiper-slide-active .appdesign {
+    -webkit-animation: fadeInLeftBig 0.6s 0.6s both;
+    -moz-animation: fadeInLeftBig 0.6s 0.6s both;
+    -o-animation: fadeInLeftBig 0.6s 0.6s both;
+    animation: fadeInLeftBig 0.6s 0.6s both;
+}
+.swiper-slide-active .appdesign .app_img:hover {
+    -webkit-animation: flip 0.6s both;
+    -moz-animation: flip 0.6s both;
+    -o-animation: flip 0.6s both;
+    animation: flip 0.6s both;
+}
+
+.swiper-slide-active .graphicdesign {
+    -webkit-animation: fadeInRightBig 0.6s 0.6s both;
+    -moz-animation: fadeInRightBig 0.6s 0.6s both;
+    -o-animation: fadeInRightBig 0.6s 0.6s both;
+    animation: fadeInRightBig 0.6s 0.6s both;
+}
+
+.swiper-slide-active .graphicdesign .apd_img:hover {
+    -webkit-animation: flip 0.6s both;
+    -moz-animation: flip 0.6s both;
+    -o-animation: flip 0.6s both;
+    animation: flip 0.6s both;
+}
+
+ .swiper-slide-active .filmpost {
+    -webkit-animation: fadeInRightBig 0.8s 0.6s both;
+    -moz-animation: fadeInRightBig 0.8s 0.6s both;
+    -o-animation: fadeInRightBig 0.8s 0.6s both;
+    animation: fadeInRightBig 0.8s 0.6s both;
+}
+
+.swiper-slide-active .filmpost .flp_img:hover {
+    -webkit-animation: flip 0.6s both;
+    -moz-animation: flip 0.6s both;
+    -o-animation: flip 0.6s both;
+    animation: flip 0.6s both;
+}
+
+/*ourwork*/
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ow_title {
+    -webkit-animation: zoomInRight 1.3s both;
+    -moz-animation: zoomInRight 1.3s both;
+    -o-animation: zoomInRight 1.3s both;
+    animation: zoomInRight 1.3s both;
+}
+
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .whiteline {
+    -webkit-animation: fadeInRightBig 0.7s 1s both;
+    -moz-animation: fadeInRightBig 0.7s 1s both;
+    -o-animation: fadeInRightBig 0.7s 1s both;
+    animation: fadeInRightBig 0.7s 1s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work1 {
+    -webkit-animation: bounceInLeft 1.2s 0.8s both;
+    -moz-animation: bounceInLeft 1.2s 0.8s both;
+    -o-animation: bounceInLeft 1.2s 0.8s both;
+    animation: bounceInLeft 1.2s 0.8s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work2 {
+    -webkit-animation: bounceInRight 1.5s 0.8s both;
+    -moz-animation: bounceInRight 1.5s 0.8s both;
+    -o-animation: bounceInRight 1.5s 0.8s both;
+    animation: bounceInRight 1.5s 0.8s both;
+}
+
+
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work3 {
+    -webkit-animation: bounceInLeft 1.3s 0.8s both;
+    -moz-animation: bounceInLeft 1.3s 0.8s both;
+    -o-animation: bounceInLeft 1.3s 0.8s both;
+    animation: bounceInLeft 1.3s 0.8s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work4 {
+    -webkit-animation: bounceInRight 1.2s 0.8s both;
+    -moz-animation: bounceInRight 1.2s 0.8s both;
+    -o-animation: bounceInRight 1.2s 0.8s both;
+    animation: bounceInRight 1.2s 0.8s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work5 {
+    -webkit-animation: bounceInLeft 1.2s 0.8s both;
+    -moz-animation: bounceInLeft 1.2s 0.8s both;
+    -o-animation: bounceInLeft 1.2s 0.8s both;
+    animation: bounceInLeft 1.2s 0.8s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work6 {
+    -webkit-animation: bounceInRight 1.5s 0.8s both;
+    -moz-animation: bounceInRight 1.5s 0.8s both;
+    -o-animation: bounceInRight 1.5s 0.8s both;
+    animation: bounceInRight 1.5s 0.8s both;
+}
+
+
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .whiteline {
+    -webkit-animation: fadeInRightBig 0.7s 1s both;
+    -moz-animation: fadeInRightBig 0.7s 1s both;
+    -o-animation: fadeInRightBig 0.7s 1s both;
+    animation: fadeInRightBig 0.7s 1s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work1 {
+    -webkit-animation: bounceInLeft 1.2s 0.8s both;
+    -moz-animation: bounceInLeft 1.2s 0.8s both;
+    -o-animation: bounceInLeft 1.2s 0.8s both;
+    animation: bounceInLeft 1.2s 0.8s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work2 {
+    -webkit-animation: bounceInRight 1.5s 0.8s both;
+    -moz-animation: bounceInRight 1.5s 0.8s both;
+    -o-animation: bounceInRight 1.5s 0.8s both;
+    animation: bounceInRight 1.5s 0.8s both;
+}
+
+
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work3 {
+    -webkit-animation: bounceInLeft 1.3s 0.8s both;
+    -moz-animation: bounceInLeft 1.3s 0.8s both;
+    -o-animation: bounceInLeft 1.3s 0.8s both;
+    animation: bounceInLeft 1.3s 0.8s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work4 {
+    -webkit-animation: bounceInRight 1.2s 0.8s both;
+    -moz-animation: bounceInRight 1.2s 0.8s both;
+    -o-animation: bounceInRight 1.2s 0.8s both;
+    animation: bounceInRight 1.2s 0.8s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work5 {
+    -webkit-animation: bounceInLeft 1.2s 0.8s both;
+    -moz-animation: bounceInLeft 1.2s 0.8s both;
+    -o-animation: bounceInLeft 1.2s 0.8s both;
+    animation: bounceInLeft 1.2s 0.8s both;
+}
+
+.swiper-container-h .swiper-slide-active .swiper-container-v .swiper-slide-active .ourwork_work6 {
+    -webkit-animation: bounceInRight 1.5s 0.8s both;
+    -moz-animation: bounceInRight 1.5s 0.8s both;
+    -o-animation: bounceInRight 1.5s 0.8s both;
+    animation: bounceInRight 1.5s 0.8s both;
+}
+
+
+
+/*team*/
+.swiper-slide-active .tm_title {
+    -webkit-animation: zoomInLeft 1s both;
+    -moz-animation: zoomInLeft 1s both;
+    -o-animation: zoomInLeft 1s both;
+    animation: zoomInLeft 1s both;
+}
+
+.swiper-slide-active .team_main .redline {
+    -webkit-animation: fadeInLeftBig 0.7s 1s both;
+    -moz-animation: fadeInLeftBig 0.7s 1s both;
+    -o-animation: fadeInLeftBig 0.7s 1s both;
+    animation: fadeInLeftBig 0.7s 1s both;
+}
+
+.swiper-slide-active .tm_slogin {
+    -webkit-animation: fadeIn 2s 1.7s both;
+    -moz-animation: fadeIn 2s 1.7s both;
+    -o-animation: fadeIn 2s 1.7s both;
+    animation: fadeIn 2s 1.7s both;
+}
+
+ .swiper-slide-active .work .line1 {
+    -webkit-animation: fadeInLeft 1.2s 1.1s both;
+    -moz-animation: fadeInLeft 1.2s 1.1s both;
+    -o-animation: fadeInLeft 1.2s 1.1s both;
+    animation: fadeInLeft 1.2s 1.1s both;
+}
+
+.swiper-slide-active .work .line2 {
+    -webkit-animation: fadeInDown 1.2s 2s both;
+    -moz-animation: fadeInDown 1.2s 2s both;
+    -o-animation: fadeInDown 1.2s 2s both;
+    animation: fadeInDown 1.2s 2s both;
+}
+
+.swiper-slide-active .designer .lio {
+    -webkit-animation: fadeInLeftBig 1s both;
+    -moz-animation: fadeInLeftBig 1s both;
+    -o-animation: fadeInLeftBig 1s both;
+    animation: fadeInLeftBig 1s both;
+}
+
+.swiper-slide-active .designer .lio .lio_icon:hover {
+    -webkit-animation: bounce 0.7s both;
+    -moz-animation: bounce 0.7s both;
+    -o-animation: bounce 0.7s both;
+    animation: bounce 0.7s both;
+}
+
+.swiper-slide-active .designer .xiong {
+    -webkit-animation: fadeInDownBig 0.8s both;
+    -moz-animation: fadeInDownBig 0.8s both;
+    -o-animation: fadeInDownBig 0.8s both;
+    animation: fadeInDownBig 0.8s both;
+}
+
+.swiper-slide-active .designer .xiong .xiong_icon:hover {
+    -webkit-animation: bounce 0.7s both;
+    -moz-animation: bounce 0.7s both;
+    -o-animation: bounce 0.7s both;
+    animation: bounce 0.7s both;
+}
+
+.swiper-slide-active .designer .ouyang {
+    -webkit-animation: fadeInUpBig 0.8s both;
+    -moz-animation: fadeInUpBig 0.8s both;
+    -o-animation: fadeInUpBig 0.8s both;
+    animation: fadeInUpBig 0.8s both;
+}
+
+.swiper-container-h .swiper-slide-active .designer .ouyang .ouyang_icon:hover {
+    -webkit-animation: bounce 0.7s both;
+    -moz-animation: bounce 0.7s both;
+    -o-animation: bounce 0.7s both;
+    animation: bounce 0.7s both;
+}
+
+.swiper-container-h .swiper-slide-active .designer .line1 {
+    -webkit-animation: fadeIn 0.8s 1.7s both;
+    -moz-animation: fadeIn 0.8s 1.7s both;
+    -o-animation: fadeIn 0.8s 1.7s both;
+    animation: fadeIn 0.8s 1.7s both;
+}
+
+.swiper-container-h .swiper-slide-active .designer .line2 {
+    -webkit-animation: fadeInLeft 0.8s 0.5s both;
+    -moz-animation: fadeInLeft 0.8s 0.5s both;
+    -o-animation: fadeInLeft 0.8s 0.5s both;
+    animation: fadeInLeft 0.8s 0.5s both;
+}
+
+.swiper-container-h .swiper-slide-active .designer .line3 {
+    -webkit-animation: fadeInUp 0.9s 0.8s both;
+    -moz-animation: fadeInUp 0.9s 0.8s both;
+    -o-animation: fadeInUp 0.9s 0.8s both;
+    animation: fadeInUp 0.9s 0.8s both;
+}
+
+/*通用*/
+.swiper-slide-active .mline {
+    -webkit-animation: bounceInUp 1s both;
+    -moz-animation: bounceInUp 1s both;
+    -o-animation: bounceInUp 1s both;
+    animation: bounceInUp 1s both;
+}
+.swiper-slide-active .mline2 {
+    -webkit-animation: bounceInDown 1s both;
+    -moz-animation: bounceInDown 1s both;
+    -o-animation: bounceInDown 1s both;
+    animation: bounceInDown 1s both;
 }
 
 

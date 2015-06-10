@@ -213,14 +213,14 @@ html, body {
 
 /*动画*/
 .active .fp-controlArrow.fp-prev {
-	   -webkit-animation: fadeInLeft 1.3s 1.8s both;
+    -webkit-animation: fadeInLeft 1.3s 1.8s both;
     -moz-animation: fadeInLeft 1.3s 1.8s both;
-    -o-animation: fadeInLeft  1.3s 1.8s both;
-    animation: fadeInLeft  1.3s 1.8s both;
+    -o-animation: fadeInLeft 1.3s 1.8s both;
+    animation: fadeInLeft 1.3s 1.8s both;
 }
 
 .active .fp-controlArrow.fp-next {
-	   -webkit-animation: fadeInRight  1.3s 1.8s both;
+    -webkit-animation: fadeInRight 1.3s 1.8s both;
     -moz-animation: fadeInRight 1.3s 1.8s both;
     -o-animation: fadeInRight 1.3s 1.8s both;
     animation: fadeInRight 1.3s 1.8s both;
